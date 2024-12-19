@@ -1,0 +1,48 @@
+.task-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.task-card.completed {
+  background: #e8f5e9;
+  border-left: 4px solid #4caf50;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.favorite-btn, .complete-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.favorite-btn.active {
+  color: #ffd700;
+}
+
+.complete-btn.active {
+  color: #4caf50;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.task-card {
+  animation: fadeIn 0.3s ease;
+} 
